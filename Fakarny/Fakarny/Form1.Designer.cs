@@ -33,14 +33,14 @@
             this.Create_New_Acount_Link = new System.Windows.Forms.LinkLabel();
             this.Login_Button = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
+            this.Login_Password_Error_Panel = new System.Windows.Forms.Panel();
             this.Wrong_Password_Label = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.Password_UnderLine_Panel = new System.Windows.Forms.Panel();
             this.Login_Password_TextBox = new System.Windows.Forms.TextBox();
             this.Login_Password_Label = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.Login_Username_Error_Panel = new System.Windows.Forms.Panel();
             this.Invalid_Password_Label = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Username_UnderLine_Panel = new System.Windows.Forms.Panel();
@@ -51,10 +51,10 @@
             this.Login_Label = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
+            this.Login_Password_Error_Panel.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
+            this.Login_Username_Error_Panel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,16 +71,16 @@
             this.panel1.Controls.Add(this.Login_UserName_Label);
             this.panel1.Controls.Add(this.Login_Username_Icon_Panel);
             this.panel1.Controls.Add(this.Login_Label);
-            this.panel1.Location = new System.Drawing.Point(304, 12);
+            this.panel1.Location = new System.Drawing.Point(406, 42);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(379, 638);
+            this.panel1.Size = new System.Drawing.Size(432, 638);
             this.panel1.TabIndex = 0;
             // 
             // Login_Fakrny_Logo_Panel
             // 
             this.Login_Fakrny_Logo_Panel.BackgroundImage = global::Fakarny.Properties.Resources.Fakrny_Icon_Demo;
             this.Login_Fakrny_Logo_Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Login_Fakrny_Logo_Panel.Location = new System.Drawing.Point(154, 18);
+            this.Login_Fakrny_Logo_Panel.Location = new System.Drawing.Point(178, 18);
             this.Login_Fakrny_Logo_Panel.Name = "Login_Fakrny_Logo_Panel";
             this.Login_Fakrny_Logo_Panel.Size = new System.Drawing.Size(80, 80);
             this.Login_Fakrny_Logo_Panel.TabIndex = 8;
@@ -89,7 +89,7 @@
             // 
             this.Create_New_Acount_Link.AutoSize = true;
             this.Create_New_Acount_Link.LinkColor = System.Drawing.Color.White;
-            this.Create_New_Acount_Link.Location = new System.Drawing.Point(137, 532);
+            this.Create_New_Acount_Link.Location = new System.Drawing.Point(167, 532);
             this.Create_New_Acount_Link.Name = "Create_New_Acount_Link";
             this.Create_New_Acount_Link.Size = new System.Drawing.Size(103, 13);
             this.Create_New_Acount_Link.TabIndex = 7;
@@ -100,31 +100,36 @@
             // 
             this.Login_Button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
             this.Login_Button.FlatAppearance.BorderSize = 2;
+            this.Login_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
             this.Login_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Login_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
-            this.Login_Button.Location = new System.Drawing.Point(92, 450);
+            this.Login_Button.Location = new System.Drawing.Point(122, 450);
             this.Login_Button.Name = "Login_Button";
             this.Login_Button.Size = new System.Drawing.Size(193, 42);
             this.Login_Button.TabIndex = 6;
             this.Login_Button.Text = "Login";
             this.Login_Button.UseVisualStyleBackColor = true;
+            this.Login_Button.Click += new System.EventHandler(this.Login_Button_Click);
+            this.Login_Button.MouseEnter += new System.EventHandler(this.Login_Button_MouseEnter);
+            this.Login_Button.MouseLeave += new System.EventHandler(this.Login_Button_MouseLeave);
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.panel9);
+            this.panel8.Controls.Add(this.Login_Password_Error_Panel);
             this.panel8.Controls.Add(this.panel10);
-            this.panel8.Location = new System.Drawing.Point(123, 306);
+            this.panel8.Location = new System.Drawing.Point(148, 298);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(244, 80);
             this.panel8.TabIndex = 5;
             // 
-            // panel9
+            // Login_Password_Error_Panel
             // 
-            this.panel9.Controls.Add(this.Wrong_Password_Label);
-            this.panel9.Location = new System.Drawing.Point(3, 46);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(241, 32);
-            this.panel9.TabIndex = 6;
+            this.Login_Password_Error_Panel.Controls.Add(this.Wrong_Password_Label);
+            this.Login_Password_Error_Panel.Location = new System.Drawing.Point(3, 46);
+            this.Login_Password_Error_Panel.Name = "Login_Password_Error_Panel";
+            this.Login_Password_Error_Panel.Size = new System.Drawing.Size(241, 23);
+            this.Login_Password_Error_Panel.TabIndex = 6;
+            this.Login_Password_Error_Panel.Visible = false;
             // 
             // Wrong_Password_Label
             // 
@@ -165,12 +170,14 @@
             this.Login_Password_TextBox.Size = new System.Drawing.Size(233, 18);
             this.Login_Password_TextBox.TabIndex = 2;
             this.Login_Password_TextBox.Text = "Password";
+            this.Login_Password_TextBox.Click += new System.EventHandler(this.Login_Password_TextBox_Click);
+            this.Login_Password_TextBox.TextChanged += new System.EventHandler(this.Login_Password_TextBox_TextChanged);
             // 
             // Login_Password_Label
             // 
             this.Login_Password_Label.AutoSize = true;
             this.Login_Password_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Login_Password_Label.Location = new System.Drawing.Point(52, 315);
+            this.Login_Password_Label.Location = new System.Drawing.Point(77, 307);
             this.Login_Password_Label.Name = "Login_Password_Label";
             this.Login_Password_Label.Size = new System.Drawing.Size(67, 16);
             this.Login_Password_Label.TabIndex = 1;
@@ -178,20 +185,21 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Controls.Add(this.Login_Username_Error_Panel);
             this.panel5.Controls.Add(this.panel2);
-            this.panel5.Location = new System.Drawing.Point(123, 200);
+            this.panel5.Location = new System.Drawing.Point(148, 200);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(244, 80);
             this.panel5.TabIndex = 5;
             // 
-            // panel6
+            // Login_Username_Error_Panel
             // 
-            this.panel6.Controls.Add(this.Invalid_Password_Label);
-            this.panel6.Location = new System.Drawing.Point(3, 46);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(241, 32);
-            this.panel6.TabIndex = 6;
+            this.Login_Username_Error_Panel.Controls.Add(this.Invalid_Password_Label);
+            this.Login_Username_Error_Panel.Location = new System.Drawing.Point(3, 46);
+            this.Login_Username_Error_Panel.Name = "Login_Username_Error_Panel";
+            this.Login_Username_Error_Panel.Size = new System.Drawing.Size(241, 23);
+            this.Login_Username_Error_Panel.TabIndex = 6;
+            this.Login_Username_Error_Panel.Visible = false;
             // 
             // Invalid_Password_Label
             // 
@@ -231,12 +239,14 @@
             this.Login_UserName_TextBox.Size = new System.Drawing.Size(233, 18);
             this.Login_UserName_TextBox.TabIndex = 2;
             this.Login_UserName_TextBox.Text = "Username";
+            this.Login_UserName_TextBox.Click += new System.EventHandler(this.Login_UserName_TextBox_Click);
+            this.Login_UserName_TextBox.TextChanged += new System.EventHandler(this.Login_UserName_TextBox_TextChanged);
             // 
             // Login_Password_Icon_Panel
             // 
             this.Login_Password_Icon_Panel.BackgroundImage = global::Fakarny.Properties.Resources.Lock_Icon;
             this.Login_Password_Icon_Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Login_Password_Icon_Panel.Location = new System.Drawing.Point(12, 306);
+            this.Login_Password_Icon_Panel.Location = new System.Drawing.Point(37, 298);
             this.Login_Password_Icon_Panel.Name = "Login_Password_Icon_Panel";
             this.Login_Password_Icon_Panel.Size = new System.Drawing.Size(34, 34);
             this.Login_Password_Icon_Panel.TabIndex = 4;
@@ -245,7 +255,7 @@
             // 
             this.Login_UserName_Label.AutoSize = true;
             this.Login_UserName_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Login_UserName_Label.Location = new System.Drawing.Point(52, 209);
+            this.Login_UserName_Label.Location = new System.Drawing.Point(77, 209);
             this.Login_UserName_Label.Name = "Login_UserName_Label";
             this.Login_UserName_Label.Size = new System.Drawing.Size(70, 16);
             this.Login_UserName_Label.TabIndex = 1;
@@ -255,7 +265,7 @@
             // 
             this.Login_Username_Icon_Panel.BackgroundImage = global::Fakarny.Properties.Resources.Profile_Icon;
             this.Login_Username_Icon_Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Login_Username_Icon_Panel.Location = new System.Drawing.Point(12, 200);
+            this.Login_Username_Icon_Panel.Location = new System.Drawing.Point(37, 200);
             this.Login_Username_Icon_Panel.Name = "Login_Username_Icon_Panel";
             this.Login_Username_Icon_Panel.Size = new System.Drawing.Size(34, 34);
             this.Login_Username_Icon_Panel.TabIndex = 4;
@@ -265,7 +275,7 @@
             this.Login_Label.AutoSize = true;
             this.Login_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Login_Label.ForeColor = System.Drawing.Color.White;
-            this.Login_Label.Location = new System.Drawing.Point(159, 113);
+            this.Login_Label.Location = new System.Drawing.Point(183, 113);
             this.Login_Label.Name = "Login_Label";
             this.Login_Label.Size = new System.Drawing.Size(70, 25);
             this.Login_Label.TabIndex = 0;
@@ -277,8 +287,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
             this.BackgroundImage = global::Fakarny.Properties.Resources.Picsart_23_11_27_23_53_32_550;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(991, 662);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.White;
@@ -288,13 +298,13 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel8.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
+            this.Login_Password_Error_Panel.ResumeLayout(false);
+            this.Login_Password_Error_Panel.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.panel5.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            this.Login_Username_Error_Panel.ResumeLayout(false);
+            this.Login_Username_Error_Panel.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -311,10 +321,10 @@
         private System.Windows.Forms.TextBox Login_UserName_TextBox;
         private System.Windows.Forms.Panel Username_UnderLine_Panel;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel Login_Username_Error_Panel;
         private System.Windows.Forms.Label Invalid_Password_Label;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel Login_Password_Error_Panel;
         private System.Windows.Forms.Label Wrong_Password_Label;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel Password_UnderLine_Panel;
