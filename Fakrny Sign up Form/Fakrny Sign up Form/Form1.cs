@@ -16,6 +16,13 @@ namespace Fakrny_Sign_up_Form
         {
             InitializeComponent();
         }
-
+        private void Have_An_Account_Link_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Form2 login = new Form2();
+            login.ShowDialog();
+            this.Show();
+            
+        }
     }
 }
