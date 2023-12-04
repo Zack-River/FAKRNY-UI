@@ -44,3 +44,7 @@ C:\Users\Zack River\Desktop\Git\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.csproj.
 C:\Users\Zack River\Desktop\Git\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.csproj.CoreCompileInputs.cache
 C:\Users\Zack River\Desktop\Git\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.exe
 C:\Users\Zack River\Desktop\Git\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.pdb
+D:\Programming\PROJECTS\Github Projects\FAKRNY-UI\Fakarny\Fakarny\obj\Debug\Fakarny.FakarnyPage.resources
+D:\Programming\PROJECTS\Github Projects\FAKRNY-UI\Fakarny\Fakarny\obj\Debug\Fakarny.SignUp.resources
+D:\Programming\PROJECTS\Github Projects\FAKRNY-UI\Fakarny\Fakarny\obj\Debug\Fakarny.UserControls.Add_Account.resources
+D:\Programming\PROJECTS\Github Projects\FAKRNY-UI\Fakarny\Fakarny\obj\Debug\Fakarny.UserControls.Edit_Account.resources
