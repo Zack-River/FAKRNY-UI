@@ -8,22 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Fakarny
+namespace Fakrny_Sign_up_Form
 {
-    public partial class Login_Form : Form
+    public partial class Form2 : Form
     {
-        public Login_Form()
+        public Form2()
         {
             InitializeComponent();
         }
-
         private void Login_UserName_TextBox_TextChanged(object sender, EventArgs e)
         {
             try
             {
                 if (Login_UserName_TextBox.Text == "")
                 {
-                    Login_UserName_TextBox.Text == "Username";
+                    Login_UserName_TextBox.Text = "Username";
                     return;
 
                 }
@@ -39,7 +38,7 @@ namespace Fakarny
             {
                 if (Login_Password_TextBox.Text == "")
                 {
-                    Login_Password_TextBox.Text == "Password";
+                    Login_Password_TextBox.Text = "Password";
                     return;
 
                 }
@@ -84,6 +83,16 @@ namespace Fakarny
                 Login_Password_TextBox.Focus();
                 return;
             }
+        }
+
+        private void Create_New_Acount_Link_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

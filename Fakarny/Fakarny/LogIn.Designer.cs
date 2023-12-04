@@ -41,7 +41,7 @@
             this.Login_Password_Label = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.Login_Username_Error_Panel = new System.Windows.Forms.Panel();
-            this.Invalid_Password_Label = new System.Windows.Forms.Label();
+            this.Invalid_Username_Label = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Username_UnderLine_Panel = new System.Windows.Forms.Panel();
             this.Login_UserName_TextBox = new System.Windows.Forms.TextBox();
@@ -95,6 +95,7 @@
             this.Create_New_Acount_Link.TabIndex = 7;
             this.Create_New_Acount_Link.TabStop = true;
             this.Create_New_Acount_Link.Text = "Create new account";
+            this.Create_New_Acount_Link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Create_New_Acount_Link_LinkClicked);
             // 
             // Login_Button
             // 
@@ -165,13 +166,15 @@
             this.Login_Password_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Login_Password_TextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
             this.Login_Password_TextBox.Location = new System.Drawing.Point(3, 3);
-            this.Login_Password_TextBox.Multiline = true;
             this.Login_Password_TextBox.Name = "Login_Password_TextBox";
-            this.Login_Password_TextBox.Size = new System.Drawing.Size(233, 18);
+            this.Login_Password_TextBox.PasswordChar = '*';
+            this.Login_Password_TextBox.Size = new System.Drawing.Size(233, 13);
             this.Login_Password_TextBox.TabIndex = 2;
             this.Login_Password_TextBox.Text = "Password";
             this.Login_Password_TextBox.Click += new System.EventHandler(this.Login_Password_TextBox_Click);
-            this.Login_Password_TextBox.TextChanged += new System.EventHandler(this.Login_Password_TextBox_TextChanged);
+            this.Login_Password_TextBox.TextChanged += new System.EventHandler(this.Pass_Changed);
+            this.Login_Password_TextBox.Enter += new System.EventHandler(this.Pass_Enter);
+            this.Login_Password_TextBox.Leave += new System.EventHandler(this.Pass_Leave);
             // 
             // Login_Password_Label
             // 
@@ -194,22 +197,22 @@
             // 
             // Login_Username_Error_Panel
             // 
-            this.Login_Username_Error_Panel.Controls.Add(this.Invalid_Password_Label);
+            this.Login_Username_Error_Panel.Controls.Add(this.Invalid_Username_Label);
             this.Login_Username_Error_Panel.Location = new System.Drawing.Point(3, 46);
             this.Login_Username_Error_Panel.Name = "Login_Username_Error_Panel";
             this.Login_Username_Error_Panel.Size = new System.Drawing.Size(241, 23);
             this.Login_Username_Error_Panel.TabIndex = 6;
             this.Login_Username_Error_Panel.Visible = false;
             // 
-            // Invalid_Password_Label
+            // Invalid_Username_Label
             // 
-            this.Invalid_Password_Label.AutoSize = true;
-            this.Invalid_Password_Label.ForeColor = System.Drawing.Color.Red;
-            this.Invalid_Password_Label.Location = new System.Drawing.Point(3, 0);
-            this.Invalid_Password_Label.Name = "Invalid_Password_Label";
-            this.Invalid_Password_Label.Size = new System.Drawing.Size(89, 13);
-            this.Invalid_Password_Label.TabIndex = 0;
-            this.Invalid_Password_Label.Text = "Invalid Username";
+            this.Invalid_Username_Label.AutoSize = true;
+            this.Invalid_Username_Label.ForeColor = System.Drawing.Color.Red;
+            this.Invalid_Username_Label.Location = new System.Drawing.Point(3, 0);
+            this.Invalid_Username_Label.Name = "Invalid_Username_Label";
+            this.Invalid_Username_Label.Size = new System.Drawing.Size(89, 13);
+            this.Invalid_Username_Label.TabIndex = 0;
+            this.Invalid_Username_Label.Text = "Invalid Username";
             // 
             // panel2
             // 
@@ -240,7 +243,9 @@
             this.Login_UserName_TextBox.TabIndex = 2;
             this.Login_UserName_TextBox.Text = "Username";
             this.Login_UserName_TextBox.Click += new System.EventHandler(this.Login_UserName_TextBox_Click);
-            this.Login_UserName_TextBox.TextChanged += new System.EventHandler(this.Login_UserName_TextBox_TextChanged);
+            this.Login_UserName_TextBox.TextChanged += new System.EventHandler(this.User_Changed);
+            this.Login_UserName_TextBox.Enter += new System.EventHandler(this.Enter_User);
+            this.Login_UserName_TextBox.Leave += new System.EventHandler(this.Leave_User);
             // 
             // Login_Password_Icon_Panel
             // 
@@ -292,9 +297,10 @@
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.White;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Login_Form";
-            this.Text = "Login_Form";
+            this.Text = "Fakrny - فكرني";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel8.ResumeLayout(false);
@@ -322,7 +328,7 @@
         private System.Windows.Forms.Panel Username_UnderLine_Panel;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel Login_Username_Error_Panel;
-        private System.Windows.Forms.Label Invalid_Password_Label;
+        private System.Windows.Forms.Label Invalid_Username_Label;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel Login_Password_Error_Panel;
         private System.Windows.Forms.Label Wrong_Password_Label;

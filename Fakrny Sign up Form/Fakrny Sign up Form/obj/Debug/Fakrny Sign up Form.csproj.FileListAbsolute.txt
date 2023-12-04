@@ -1,0 +1,11 @@
+C:\Users\Zack River\Desktop\Git\FAKRNY-UI\Fakrny Sign up Form\Fakrny Sign up Form\bin\Debug\Fakrny Sign up Form.exe.config
+C:\Users\Zack River\Desktop\Git\FAKRNY-UI\Fakrny Sign up Form\Fakrny Sign up Form\bin\Debug\Fakrny Sign up Form.exe
+C:\Users\Zack River\Desktop\Git\FAKRNY-UI\Fakrny Sign up Form\Fakrny Sign up Form\bin\Debug\Fakrny Sign up Form.pdb
+C:\Users\Zack River\Desktop\Git\FAKRNY-UI\Fakrny Sign up Form\Fakrny Sign up Form\obj\Debug\Fakrny Sign up Form.csproj.AssemblyReference.cache
+C:\Users\Zack River\Desktop\Git\FAKRNY-UI\Fakrny Sign up Form\Fakrny Sign up Form\obj\Debug\Fakrny_Sign_up_Form.Sign_Up_Form.resources
+C:\Users\Zack River\Desktop\Git\FAKRNY-UI\Fakrny Sign up Form\Fakrny Sign up Form\obj\Debug\Fakrny_Sign_up_Form.Properties.Resources.resources
+C:\Users\Zack River\Desktop\Git\FAKRNY-UI\Fakrny Sign up Form\Fakrny Sign up Form\obj\Debug\Fakrny Sign up Form.csproj.GenerateResource.cache
+C:\Users\Zack River\Desktop\Git\FAKRNY-UI\Fakrny Sign up Form\Fakrny Sign up Form\obj\Debug\Fakrny Sign up Form.csproj.CoreCompileInputs.cache
+C:\Users\Zack River\Desktop\Git\FAKRNY-UI\Fakrny Sign up Form\Fakrny Sign up Form\obj\Debug\Fakrny Sign up Form.exe
+C:\Users\Zack River\Desktop\Git\FAKRNY-UI\Fakrny Sign up Form\Fakrny Sign up Form\obj\Debug\Fakrny Sign up Form.pdb
+C:\Users\Zack River\Desktop\Git\FAKRNY-UI\Fakrny Sign up Form\Fakrny Sign up Form\obj\Debug\Fakrny_Sign_up_Form.Form2.resources

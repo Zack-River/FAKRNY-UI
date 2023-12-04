@@ -63,6 +63,16 @@ namespace Fakrny_Sign_up_Form.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Fakrny_Icon_Demo {
+            get {
+                object obj = ResourceManager.GetObject("Fakrny_Icon_Demo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Lock_Icon {
             get {
                 object obj = ResourceManager.GetObject("Lock Icon", resourceCulture);

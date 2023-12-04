@@ -91,6 +91,7 @@
             this.Have_An_Account_Link.TabIndex = 14;
             this.Have_An_Account_Link.TabStop = true;
             this.Have_An_Account_Link.Text = "Already have an account";
+            this.Have_An_Account_Link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Have_An_Account_Link_LinkClicked);
             // 
             // SignUp_Button
             // 
