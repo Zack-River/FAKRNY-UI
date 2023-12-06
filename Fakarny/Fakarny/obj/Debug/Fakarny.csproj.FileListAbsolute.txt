@@ -48,3 +48,5 @@ D:\Programming\PROJECTS\Github Projects\FAKRNY-UI\Fakarny\Fakarny\obj\Debug\Faka
 D:\Programming\PROJECTS\Github Projects\FAKRNY-UI\Fakarny\Fakarny\obj\Debug\Fakarny.SignUp.resources
 D:\Programming\PROJECTS\Github Projects\FAKRNY-UI\Fakarny\Fakarny\obj\Debug\Fakarny.UserControls.Add_Account.resources
 D:\Programming\PROJECTS\Github Projects\FAKRNY-UI\Fakarny\Fakarny\obj\Debug\Fakarny.UserControls.Edit_Account.resources
+C:\Users\Zack River\Desktop\Git\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.UserControls.Add_Account.resources
+C:\Users\Zack River\Desktop\Git\FAKRNY\Fakarny\Fakarny\obj\Debug\Fakarny.UserControls.Edit_Account.resources

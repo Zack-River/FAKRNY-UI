@@ -178,7 +178,7 @@ namespace Fakarny
         #region SignUp
         private void SignUp_Button_Click(object sender, EventArgs e)
         {
-            bool done = false;
+            bool fn = false;
             #region Fullname Check
             if (SignUp_Fullname_Textbox.Text == "" || SignUp_Fullname_Textbox.Text == "Full name")
             {
@@ -190,13 +190,13 @@ namespace Fakarny
             {
                 Invalid_Fullname.Hide();
                 Star1.Hide();
-                done = true;
+                fn = true;
             }
             #endregion
             string temp_username = ComputeHash(SignUp_Username_Textbox.Text);
             File_ext = Program_path + "\\data\\" + temp_username;
             #region Username Check
-            done = false;
+            bool un = false;
             if (SignUp_Username_Textbox.Text == "" || SignUp_Username_Textbox.Text == "Username")
             {
                 Star2.Show();
@@ -220,13 +220,13 @@ namespace Fakarny
             }
             else
             {
-                done = true;
+                un = true;
                 Star2.Hide();
                 Invalid_Username_Label.Hide();
             }
             #endregion
             #region Password Check
-            done = false;
+            bool pc = false;
             if (SignUp_Password_Textbox.Text == "")
             {
                 Invalid_Password.Show();
@@ -253,11 +253,11 @@ namespace Fakarny
                 {
                     Invalid_Password.Hide();
                     Star3.Hide();
-                    done = true;
+                    pc = true;
                 }
             #endregion
             #region Confirmation
-            done = false;
+            bool con = false;
                 if(!(SignUp_Confirm_Password_Textbox.Text == SignUp_Password_Textbox.Text))
                 {
                     Star4.Show();
@@ -269,10 +269,10 @@ namespace Fakarny
                 {
                     Star4.Hide();
                     Password_Matching.Hide();
-                done = true;
+                con = true;
                 }
             #endregion
-            if (done)
+            if (fn && un && pc && con)
             {
                 if (!Directory.Exists(Program_path + "\\data"))
                 {
@@ -295,7 +295,6 @@ namespace Fakarny
                 SignUp_Confirm_Password_Textbox.Text = "Confirm Password";
                 this.Close();
             }
-
 
         }
 
